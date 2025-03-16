@@ -55,4 +55,16 @@ Version Strategy
 - `--upgrade --quiet` ensures latest stable versions with clean output
 - Pinned versions in requirements.txt recommended for production
 
+Why This Matters for Graph RAG:
 
+- Hybrid Retrieval
+1. neo4j handles graph-aware retrieval (relationship traversal)
+2. langchain-openai provides vector similarity (cosine distance in embedding space)
+
+- Local Inference Stack
+1. langchain-ollama + llama2 enables private document processing
+2. 50% reduction in cloud API costs compared to GPT-4
+
+- Debugging Tools
+1. yfiles_jupyter_graphs visualizes graph structure using Fruchterman-Reingold layout
+2. json-repair handles malformed LLM outputs (common in complex queries)
