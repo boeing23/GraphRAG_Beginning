@@ -40,11 +40,11 @@ Docker Setup
 I have added the docker-compose.yaml file.
 
 Critical Dependencies Breakdown
-| Library	| Purpose	| Mathematical/Functional Relevance |
-| langchain	| Core RAG framework | Implements retrieval chains: Retrieval → Ranking → Generation |
-| langchain-ollama | Local LLM integration | Enables llama2, mistral model inference via Ollama |
-| neo4j	| Graph database driver |	Implements Cypher query execution with graph.schema validation |
-| tiktoken |	Token counting | BPE tokenization for context window management (CL100k base) |
-| yfiles_jupyter_graphs |	Graph visualization |	Force-directed layout algorithms for knowledge graph display |
-| langchain-openai | Cloud LLM fallback |	Alternative to Ollama using text-embedding-ada-002 embeddings |
-| python-dotenv	| Secret management |	Secure credential loading for Neo4J/OpenAI connections |
+| Library   	         | Purpose	            | Mathematical/Functional Relevance                               |
+| langchain	            | Core RAG framework    | Implements retrieval chains: Retrieval → Ranking → Generation   |
+| langchain-ollama      | Local LLM integration | Enables llama2, mistral model inference via Ollama              |
+| neo4j	               | Graph database driver |	Implements Cypher query execution with graph.schema validation |
+| tiktoken              |	Token counting       | BPE tokenization for context window management (CL100k base)    |
+| yfiles_jupyter_graphs |	Graph visualization  |	Force-directed layout algorithms for knowledge graph display   |
+| langchain-openai      | Cloud LLM fallback    |	Alternative to Ollama using text-embedding-ada-002 embeddings  |
+| python-dotenv	      | Secret management     |	Secure credential loading for Neo4J/OpenAI connections         |
