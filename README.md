@@ -101,3 +101,6 @@ When processing a query "Explain neural networks":
 ```
 Similarity = cos(θ) = (Q · C_i) / (||Q|| ||C_i||)
 ```
+- Retrieve top-K chunks with highest scores
+
+**Integration Note:** Your system combines this with graph-aware retrieval (relationship traversal in Neo4J) for hybrid results ranking.
