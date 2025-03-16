@@ -98,4 +98,6 @@ Ignores vector length differences, focusing purely on directional alignment. Cri
 When processing a query "Explain neural networks":
 - Query → Embedding vector Q
 - Calculate cosine similarity with all chunk embeddings C_i
-
+```
+Similarity = cos(θ) = (Q · C_i) / (||Q|| ||C_i||)
+```
