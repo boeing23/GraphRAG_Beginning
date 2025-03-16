@@ -1,4 +1,5 @@
 
+
 # GraphRAG_Beginning
 In this repository I will be telling how to get started with GraphRAGs, I have used Neo4J for creating the Knowledge Graphs
 
