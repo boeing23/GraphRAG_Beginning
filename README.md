@@ -68,3 +68,8 @@ Why This Matters for Graph RAG:
 - Debugging Tools
 1. yfiles_jupyter_graphs visualizes graph structure using Fruchterman-Reingold layout
 2. json-repair handles malformed LLM outputs (common in complex queries)
+
+- Cosine Similarity: Core Concept
+Mathematical Definition
+Measures similarity between two vectors by calculating the cosine of the angle between them:
+![Cosine Similarity Formula](https://latex.codecogs.com/svg.latex?\text{Similarity}%20=%20\cos(\theta)%20=%20\frac{\mathbf{A}%20\cdot%20\mathbf{B}}{\|\mathbf{A}\|%20\|\mathbf{B}\|})
