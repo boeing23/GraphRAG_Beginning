@@ -78,7 +78,24 @@ Output Range: -1 (opposite) to 1 (identical). In text embeddings, values typical
 
 # Why It Matters in Graph RAG
 1. Semantic Matching
+   - Text chunks/documents are encoded as dense vectors (embeddings) using models like sentence-transformers
+   - Cosine similarity identifies semantically related content even without exact keyword matches
 
-2. Text chunks/documents are encoded as dense vectors (embeddings) using models like sentence-transformers
+2. Vector Index Efficiency
+- Neo4J uses this metric for:
 
-3. Cosine similarity identifies semantically related content even without exact keyword matches
+```
+CREATE VECTOR INDEX chunk_embeddings FOR (n:Chunk) ON n.embedding OPTIONS {indexConfig: {`vector.dimensions`: 384, `vector.similarity`: 'cosine'}}
+```
+- Enables fast nearest-neighbor search (O(1) to O(log N) complexity)
+  
+3. Magnitude Invariance
+Ignores vector length differences, focusing purely on directional alignment. Critical for comparing:
+- Short queries vs long documents
+- Paragraphs vs sentences
+
+# Example in Your Pipeline
+When processing a query "Explain neural networks":
+- Query → Embedding vector Q
+- Calculate cosine similarity with all chunk embeddings C_i
+
