@@ -74,3 +74,11 @@ Measures similarity between two vectors by calculating the cosine of the angle b
 ```
 Similarity = cos(θ) = (A · B) / (||A|| ||B||)
 ```
+Output Range: -1 (opposite) to 1 (identical). In text embeddings, values typically range 0-1 due to
+
+# Why It Matters in Graph RAG
+1. Semantic Matching
+
+2. Text chunks/documents are encoded as dense vectors (embeddings) using models like sentence-transformers
+
+3. Cosine similarity identifies semantically related content even without exact keyword matches
