@@ -4,27 +4,26 @@ Graph RAG Setup Guide
 Prerequisites
 Ollama
 
-Local LLM runner for executing open-source language models (e.g. Llama2, Mistral)
+# Local LLM runner for executing open-source language models (e.g. Llama2, Mistral)
 
-Installation Guide
+# Installation Guide
 Required for local LLM inference without cloud dependencies
 
-Neo4J
+# Neo4J
 
 Graph database for storing knowledge graph relationships and vector embeddings
 
 Desktop Version: 5.22.0+ (mandatory for vector index support)
 
-Desktop Setup Guide
-Vector indexes enable efficient similarity search on embeddings
+# Desktop Setup Guide
+- Vector indexes enable efficient similarity search on embeddings
 
-Docker
+# Docker
 
-Containerization platform for Neo4J deployment
+- Containerization platform for Neo4J deployment
+- Alternative to desktop app using provided docker-compose.yaml
 
-Alternative to desktop app using provided docker-compose.yaml
-
-Neo4J Configuration
+# Neo4J Configuration
 Desktop Setup
 1. Create new DBMS in Neo4J Desktop
 2. Use version `5.22.0` or higher
@@ -36,10 +35,10 @@ Desktop Setup
 
 Also install APOC pluggin for the respective database which you would be using. 
 
-Docker Setup
+# Docker Setup
 I have added the docker-compose.yaml file.
 
-Critical Dependencies Breakdown
+# Critical Dependencies Breakdown
 | Library   	         | Purpose	            | Mathematical/Functional Relevance                               |
 |-----------------------|-----------------------|-----------------------------------------------------------------|
 | langchain	            | Core RAG framework    | Implements retrieval chains: Retrieval → Ranking → Generation   |
@@ -51,11 +50,11 @@ Critical Dependencies Breakdown
 | python-dotenv	      | Secret management     |	Secure credential loading for Neo4J/OpenAI connections         |
 
 
-Version Strategy
+# Version Strategy
 - `--upgrade --quiet` ensures latest stable versions with clean output
 - Pinned versions in requirements.txt recommended for production
 
-Why This Matters for Graph RAG:
+# Why This Matters for Graph RAG:
 
 - Hybrid Retrieval
 1. neo4j handles graph-aware retrieval (relationship traversal)
@@ -69,7 +68,7 @@ Why This Matters for Graph RAG:
 1. yfiles_jupyter_graphs visualizes graph structure using Fruchterman-Reingold layout
 2. json-repair handles malformed LLM outputs (common in complex queries)
 
-- Cosine Similarity: Core Concept
+# Cosine Similarity: Core Concept
 Mathematical Definition
 Measures similarity between two vectors by calculating the cosine of the angle between them:
 ```
