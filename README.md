@@ -49,3 +49,10 @@ Critical Dependencies Breakdown
 | yfiles_jupyter_graphs |	Graph visualization  |	Force-directed layout algorithms for knowledge graph display   |
 | langchain-openai      | Cloud LLM fallback    |	Alternative to Ollama using text-embedding-ada-002 embeddings  |
 | python-dotenv	      | Secret management     |	Secure credential loading for Neo4J/OpenAI connections         |
+
+
+Version Strategy
+- `--upgrade --quiet` ensures latest stable versions with clean output
+- Pinned versions in requirements.txt recommended for production
+
+
