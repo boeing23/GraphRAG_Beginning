@@ -1,9 +1,11 @@
 
 # GraphRAG_Beginning
 In this repository I will be telling how to get started with GraphRAGs, I have used Neo4J for creating the Knowledge Graphs
-Graph RAG Setup Guide\\
+
+Graph RAG Setup Guide
 
 Prerequisites\\
+
 Ollama
 
 # Local LLM runner for executing open-source language models (e.g. Llama2, Mistral)
