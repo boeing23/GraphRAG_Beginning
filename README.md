@@ -41,7 +41,7 @@ I have added the docker-compose.yaml file.
 
 Critical Dependencies Breakdown
 | Library   	         | Purpose	            | Mathematical/Functional Relevance                               |
--------------------------------------------------------------------------------------------------------------------
+|-----------------------|-----------------------|-----------------------------------------------------------------|
 | langchain	            | Core RAG framework    | Implements retrieval chains: Retrieval → Ranking → Generation   |
 | langchain-ollama      | Local LLM integration | Enables llama2, mistral model inference via Ollama              |
 | neo4j	               | Graph database driver |	Implements Cypher query execution with graph.schema validation |
